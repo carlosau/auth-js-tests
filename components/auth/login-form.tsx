@@ -15,6 +15,8 @@ import {
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { CardWrapper } from "./card-wrapper"
+import { FormError } from "../form-error"
+import { FormSuccesss } from "../form-success"
 
 export const LoginForm = () => {
     const form = useForm<z.infer<typeof LoginSchema>>({
@@ -76,6 +78,8 @@ export const LoginForm = () => {
                             )}
                         />
                     </div>
+                    <FormError message="Need to authenticate" />
+                    <FormSuccesss message="Succeded" />
                     <Button>
                         Login
                     </Button>
